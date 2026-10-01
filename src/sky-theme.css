@@ -1,0 +1,315 @@
+/* Bright skies: expressive visuals over the responsive public-service layout. */
+:root{font-family:'DM Sans','Noto Sans Devanagari',sans-serif;--navy:#143d56;--green:#087eaa;--dark:#143d56;--muted:#4c6e82;--line:#cfe3eb;--serif:'Fraunces',Georgia,serif;--sky:#e8f8ff;--cyan:#087eaa;--ink:#143d56;color:var(--ink);background:#f8fcff}
+html{scroll-behavior:smooth}
+button,a,input,select,summary{transition:background .22s ease,border-color .22s ease,color .22s ease,box-shadow .22s ease,transform .25s ease}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline-color:#007bab}
+.button{border-radius:10px;font-weight:600}
+.button.primary{background:#087eaa;box-shadow:0 5px 14px #057ca320!important;color:white}
+.button.primary:hover{background:#006b96;box-shadow:0 8px 22px #057ca335!important;transform:translateY(-2px)}
+.button.secondary{border-color:#bedce9;background:#ffffff;color:#17668b}
+.button.secondary:hover{background:#e8f8ff;transform:translateY(-2px)}
+.button>svg,.portal-launch>svg,.portal-service-action>svg,.text-action>svg,.portal-hero-links svg{transition:transform .25s ease}
+.button:hover>svg,.portal-launch:hover>svg,.portal-service:hover .portal-service-action>svg,.text-action:hover>svg{transform:translate(3px,-2px)}
+.icon-btn{border-radius:9px;color:#46728b}
+.icon-btn:hover{background:#dcf4ff;color:#0877a2;transform:translateY(-2px)}
+.pill{border-radius:20px;background:#e1f3ff;color:#1a688e;border:1px solid #c2e3f5}
+.pill.amber{background:#fff4dc;border-color:#f1ddb0;color:#875817}
+.brand{font-family:var(--serif);font-weight:600;letter-spacing:-1.25px;color:#153d56}
+.brand-dot{color:#e3a13f}
+.brand-mark{color:#087eaa}
+.portal-masthead{background:#ffffffed;border-top:3px solid #72cfe4;box-shadow:0 4px 22px #217ba409;backdrop-filter:blur(18px)}
+.portal-utility{background:#eaf7fc;color:#36617b}
+.portal-utility button{color:#216489}
+.portal-utility button:hover{color:#007ea8;transform:translateY(-1px)}
+.portal-identity{background:#ffffffaa}
+.portal-brand .brand{font-size:32px}
+.portal-descriptor{font-size:8px;letter-spacing:1px;color:#51788c}
+.portal-institution{border-color:#cee4ed}
+.portal-institution strong{color:#355e76;font-size:12px;font-weight:600}
+.portal-institution span{color:#587b8f;font-size:9px}
+.portal-team strong{color:#1d566f}
+.portal-team b{color:#087eaa}
+.portal-navigation{background:#f2faff;border-top:1px solid #dfedf4;box-shadow:0 1px 0 #c9e0eb}
+.portal-navigation nav a{color:#315f7b;font-weight:600;font-size:12px;position:relative}
+.portal-navigation nav a:hover,.portal-navigation nav a:focus-visible{color:#057ca7;border-color:#35b1d6}
+.portal-navigation nav a:before{content:'';position:absolute;inset:6px -10px;border-radius:8px;background:#d9f3ff;opacity:0;transition:opacity .25s;z-index:-1}
+.portal-navigation nav a:hover:before{opacity:1}
+.portal-launch{background:#087eaa;border-color:#087eaa;color:#fff;border-radius:9px;margin:4px 0;font-size:11px}
+.portal-launch:hover{background:#06698f;box-shadow:0 4px 16px #0b819525;transform:translateY(-1px)}
+.portal-kicker{color:#31778b;font-weight:600;letter-spacing:1.4px}
+.portal-kicker>span{background:#40b5cf;box-shadow:0 0 0 4px #4fb5d017;border-radius:50%}
+.portal-section{border-bottom-color:#d7eaf2}
+.portal-hero{background:radial-gradient(ellipse at 88% 30%,#ddf7ff 0,transparent 55%),linear-gradient(125deg,#fff 12%,#f3fbff 100%)}
+.portal-hero h1{font-family:var(--serif);font-size:clamp(42px,4.7vw,70px);font-weight:500;line-height:1.1;letter-spacing:-2.3px;color:#143d56}
+.portal-hero h1>span{color:#0c83a7;position:relative}
+.portal-hero h1>span:after{content:'';position:absolute;left:2px;right:3%;bottom:-4px;height:8px;border-top:3px solid #efc365a0;border-radius:50%;transform:rotate(-1.5deg)}
+.portal-hero-copy>p{color:#4f748a;font-size:clamp(13px,1.1vw,16px)}
+.portal-location-form>label{color:#30576d;font-weight:600}
+.portal-location-form>div{border:1px solid #b3d8e9;border-radius:11px;box-shadow:0 8px 20px #4484a00a;transition:box-shadow .25s,border-color .25s}
+.portal-location-form>div:focus-within{border-color:#228fb8;box-shadow:0 0 0 4px #4ab6d51c}
+.portal-location-form>div>svg{color:#218fb1}
+.portal-location-form select{border-radius:10px;color:#24556e}
+.portal-location-form button{background:#087eaa;border-radius:0 10px 10px 0}
+.portal-location-form button:hover{background:#076990}
+.portal-hero-links button,.portal-hero-links a{color:#247392;font-weight:600}
+.portal-hero-links button:hover,.portal-hero-links a:hover{color:#005c83;transform:translateY(-2px)}
+.portal-context{color:#567b8d;font-size:10px}.portal-context svg{color:#329dba}
+.portal-weather-panel{border:1px solid #c6e5f2;border-radius:24px;background:#e4f7ff;box-shadow:0 18px 45px #3e99b513,inset 0 0 0 5px #ffffff55;isolation:isolate}
+.portal-panel-top{background:#f4fcffb3;border-color:#cce9f2;color:#35718b;font-size:9px;padding-inline:18px}
+.portal-panel-top>button{border-radius:8px;color:#2883a5}
+.portal-panel-top>button:hover{background:#d4f2ff;transform:scale(1.08)}
+.portal-scene{background:radial-gradient(ellipse at 55% 28%,#f6fdff 5%,#ddf4ff 57%,#c8eef9 100%);overflow:hidden}
+.portal-scene .cloud-canvas{inset:-12px -52px -22px -6px;z-index:2}
+.sky-orbit{position:absolute;width:95%;aspect-ratio:1.4;border:1px dashed #4aa8c338;border-radius:50%;left:12%;top:12%;transform:rotate(-23deg);pointer-events:none;animation:sky-orbit 35s linear infinite}
+.sky-orbit:before{content:'';position:absolute;left:10%;top:10%;height:7px;width:7px;background:#69c5e0;border:3px solid #f1fcff;border-radius:50%;box-shadow:0 0 0 5px #88d5e425}
+.orbit-two{width:75%;left:22%;top:22%;border-style:solid;opacity:.55;animation-duration:50s;animation-direction:reverse}
+.portal-temperature{z-index:4;border:1px solid #fff;border-left:3px solid #42bbd5;border-radius:13px;padding:12px 15px;box-shadow:0 8px 25px #23658212;background:#ffffffdf;backdrop-filter:blur(9px);animation:weather-float 7s ease-in-out infinite;transform-origin:center}
+.portal-temperature strong{color:#166889;font-size:36px;font-weight:600}
+.portal-temperature>span{color:#507a8e}
+.portal-temperature>span:first-child{font-weight:600;color:#37768f;letter-spacing:.8px}
+.portal-scene-controls{background:#f5fcffc9;border-color:#c6e5f1;padding-inline:15px}
+.portal-scene-controls>span{color:#4c788b}
+.portal-scene-controls button{border-radius:8px;border-color:#c5e2ed;color:#39809b;background:#ffffffbd}
+.portal-scene-controls button[aria-pressed=true]{background:#087eaa;border-color:#087eaa;box-shadow:0 3px 8px #1288b223;color:#fff}
+.portal-scene-controls button:hover{transform:translateY(-2px);border-color:#42a8c9}
+.farmer-guide{position:absolute;z-index:5;left:20px;bottom:18px;background:none;padding:0;display:flex;flex-direction:column;align-items:center;filter:drop-shadow(0 10px 8px #276b9520);animation:farmer-float 7s ease-in-out infinite;transform-origin:bottom}
+.farmer-guide>img{height:clamp(150px,29vh,270px);width:auto;max-width:none;object-fit:contain}
+.farmer-guide>span{position:absolute;bottom:8px;left:calc(100% - 13px);display:flex;align-items:center;gap:8px;white-space:nowrap;background:#fffffff0;border:1px solid #fff;box-shadow:0 7px 20px #2d729018;padding:9px 11px;border-radius:11px;color:#2e829c;transform:rotate(-3deg);font-size:10px;line-height:1.35;text-align:left}
+.farmer-guide strong{color:#23576f;font-weight:600}
+.farmer-guide:hover{filter:drop-shadow(0 12px 10px #188bb02b)}
+.farmer-guide:hover>span{background:#fff;transform:rotate(0) translateY(-3px)}
+.farmer-guide>span{transition:transform .25s,background .25s}
+.scene-paused *{animation-play-state:paused!important}
+.portal-summary-strip{border-color:#cce5ef}
+.portal-summary-strip>div{border-color:#cce5ef;transition:transform .25s}
+.portal-summary-strip>div:hover{transform:translateY(-3px)}
+.portal-summary-strip>div>svg{color:#1a97ba;background:#e3f5fc;padding:7px;width:36px;height:36px;border-radius:10px}
+.portal-summary-strip strong{color:#205975}.portal-summary-strip small{color:#577d90}.portal-summary-strip>a{color:#307c98}
+.portal-summary-strip>a:hover svg{animation:arrow-nudge 1s ease-in-out infinite}
+.portal-section-heading h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,2.7vw,41px);letter-spacing:-1px;line-height:1.2;color:#1e4a64}
+.portal-services{background:linear-gradient(140deg,#edf8ff,#f9fdff 65%,#ebfafb)}
+.portal-availability{color:#4c7b8f}.portal-availability>span{background:#25a3bb;box-shadow:0 0 0 4px #5ac7d214}
+.portal-service{position:relative;background:#ffffffed;border-color:#d3e9f2;border-radius:16px;box-shadow:0 4px 15px #236c9904;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.portal-service:after{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#4fc4e3,#abdfee);opacity:0;transform:scaleX(.3);transition:transform .35s,opacity .3s}
+.portal-service:hover{transform:translateY(-5px)!important;border-color:#86cde5;box-shadow:0 15px 28px #2887b51a}
+.portal-service:hover:after{opacity:1;transform:scaleX(1)}
+.portal-service-top{color:#1685aa}.portal-service-top>svg{transition:transform .35s}
+.portal-service:hover .portal-service-top>svg{transform:rotate(-9deg) scale(1.13)}
+.portal-service-top>span{color:#6a9bb0;opacity:.75;font-size:11px}
+.portal-service h3{color:#1d526f;font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:-.35px}
+.portal-service p{color:#567b8f}.portal-service-action{color:#137ba4;font-weight:600}
+.featured-service{background:linear-gradient(145deg,#bce9fa,#e1f5ff 55%,#d5f5f4);color:#1c526e;border-color:#a9dceb;box-shadow:inset 0 0 35px #ffffff30}
+.featured-service h3{font-family:var(--serif);font-weight:500;font-size:clamp(27px,2.4vw,37px);color:#19526f}
+.featured-service .portal-service-top,.featured-service .portal-service-action{color:#17799b}
+.featured-service p,.featured-service .portal-service-top>span{color:#3d748b}
+.portal-service-weather{color:#1d93b5;gap:25px}.portal-service-weather>svg{filter:drop-shadow(0 5px 3px #e7faff);animation:weather-float 7s ease-in-out infinite}
+.portal-service-weather>span{font-family:var(--serif);font-weight:500;font-size:76px;color:#2384a5}.portal-service-weather small{font-family:'DM Sans',sans-serif;font-size:9px;color:#438499}
+.service-art{position:absolute;right:15px;top:8px;width:65px;height:72px;object-fit:contain;pointer-events:none;filter:drop-shadow(0 4px 5px #347d9515);transition:transform .4s}
+.portal-service:has(.service-art) .portal-service-top>span{visibility:hidden}
+.portal-service:hover .service-art{transform:translateY(-4px) rotate(4deg) scale(1.07)}
+.adviser-art{width:67px;height:81px;top:3px;right:15px}
+.portal-section-note{color:#4e788d}
+.portal-method{background:radial-gradient(ellipse at 5% 90%,#e8faff,transparent 65%),#fff}
+.portal-landscape{border-radius:20px;box-shadow:0 10px 32px #296b8215}
+.portal-landscape>img{transition:transform 1.3s ease}
+.portal-landscape:hover>img{transform:scale(1.045)}
+.portal-landscape:after{background:linear-gradient(0deg,#12465be8,transparent 85%)}
+.portal-landscape-grid{opacity:.1}
+.portal-landscape figcaption strong{font-family:var(--serif);font-weight:500;letter-spacing:-.8px}
+.portal-method-content li{transition:transform .25s ease}
+.portal-method-content li:hover{transform:translateX(5px)}
+.portal-method-content li>span{background:#e6f7ff;border-color:#bce2f1;border-radius:11px;color:#218bac;box-shadow:0 4px 9px #238eb20b;transition:background .25s,color .25s,transform .25s}
+.portal-method-content li:hover>span{background:#158bb4;color:white;transform:rotate(-5deg)}
+.portal-method-content h3{color:#22546d}.portal-method-content li p{color:#54798c}
+.portal-method-actions>span{color:#3a8f95}.portal-method-note{color:#537c91;border-color:#d1e8f0}
+.portal-project{background:linear-gradient(130deg,#f2fbff,#e8f7ff 80%)}
+.portal-roadmap{border-color:#cce6f0;border-radius:16px;overflow:hidden;box-shadow:0 7px 25px #2782a307}
+.portal-roadmap-heading{background:#e3f4fc;color:#2b6381}.portal-roadmap-heading>span{color:#517b91}
+.portal-roadmap>button{background:#ffffffdf;border-color:#dfedf3;transition:background .25s,transform .25s,padding .25s}
+.portal-roadmap>button:hover{background:#e8f8ff;padding-left:27px}
+.portal-roadmap-number{color:#66a8c3;font-weight:500}.portal-roadmap>button strong{color:#325f78;font-weight:600}.portal-roadmap>button small{color:#628797}
+.portal-roadmap>button>svg{color:#6295a9;transition:transform .25s}.portal-roadmap>button:hover>svg:last-child{transform:translateX(4px)}
+.portal-project-card{border:1px solid #bfe1ef;border-radius:16px;border-top:4px solid #5bbbd7;background:linear-gradient(160deg,#fff,#edfaff);box-shadow:0 8px 30px #23789f09}
+.portal-project-card h3{font-family:var(--serif);font-weight:500;color:#20516b;font-size:31px}
+.portal-team-id strong{color:#1381a7}.portal-project-card>p,.portal-project-card dt{color:#567c90}.portal-project-card dd{color:#2b6682;font-weight:500}
+.portal-footer{border-color:#cee5f0;color:#567b90}.portal-footer a,.portal-footer button{color:#297c9b}.portal-footer button:hover,.portal-footer a:hover{color:#00688d;text-decoration:underline}
+.chat-fab{background:#fff;color:#166b8e;border:1px solid #b8dfef;border-radius:40px;padding:7px 16px 7px 7px;gap:9px;box-shadow:0 7px 27px #277fa428;font-weight:600;transition:box-shadow .25s,transform .25s}
+.chat-fab>img{width:35px;height:35px;border-radius:50%;object-fit:cover;object-position:center 12%;background:#d9f4ff;border:1px solid #c0e6f3}
+.chat-fab:hover{background:#f3fcff;transform:translateY(-3px);box-shadow:0 12px 30px #1982ad33}
+
+/* The same light palette continues through every working service. */
+.workspace{background:linear-gradient(125deg,#f3faff,#eef8fc);color:#244e66}
+.sidebar{background:linear-gradient(170deg,#f5fcff,#e6f6ff);border-right:1px solid #c9e5f1;color:#3d7592}
+.sidebar>.brand,.sidebar .brand.light{color:#205774}
+.workspace-label{color:#56839b;letter-spacing:1.3px}
+.sidebar nav>button{color:#3b718b;border-radius:9px;font-weight:500;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.sidebar nav>button:hover{background:#dceffc;color:#126f98;transform:translateX(3px)}
+.sidebar nav>button.active{background:linear-gradient(90deg,#c9ecfb,#dff4ff);color:#126b92;border-left-color:#20a3cd;box-shadow:0 4px 10px #1b82ae09;font-weight:600}
+.sidebar nav>button.active>svg{animation:icon-arrive .45s ease-out}
+.sidebar nav>button.locked-nav{color:#628aa0}.sidebar nav>button.locked-nav:hover{color:#1a779a}
+.sidebar-divider{background:#c9e2ed}.sidebar-bottom>.pill{background:#daeff9;color:#3f7895;border-color:#c2e0ed}
+.sidebar-team{color:#295e7b}.sidebar-team>span{background:#c9eaf6;color:#217593;border:1px solid #b8dce9;border-radius:10px}
+.sidebar-team small,.sidebar-bottom>button{color:#5c8399}.sidebar-bottom>button:hover{color:#087eaa;transform:translateX(-2px)}
+.new-dot{background:#29acbe}.workspace-header{background:#ffffffd9;border-color:#d1e6ef;backdrop-filter:blur(15px)}
+.assistant-top{background:#e3f6fe;border-color:#baddf0;color:#19789c;border-radius:20px;transition:box-shadow .25s,transform .25s}
+.assistant-top:hover{transform:translateY(-2px);background:#d4f0fe;box-shadow:0 6px 15px #1884b012}
+.avatar{background:#dff2fc;color:#2c799a;border-radius:50%}
+.location-search input{color:#225873}.location-search input::placeholder{color:#63879b}.location-search>svg,.header-date{color:#5d849c}
+.workspace-title h1{font-family:var(--serif);font-weight:500;color:#214f69;font-size:clamp(25px,2.45vw,35px);letter-spacing:-.8px}
+.workspace-title .eyebrow{color:#41819e}.workspace-title p{color:#5d7f94}
+.stats-grid{perspective:1000px}
+.stat-card{background:#ffffffeb;border-color:#cde5f1;border-radius:13px;box-shadow:0 4px 14px #3e8bb007;transition:transform .28s,border-color .28s,box-shadow .28s;animation:sky-arrive .5s backwards}
+.stat-card:nth-child(2){animation-delay:.07s}.stat-card:nth-child(3){animation-delay:.14s}.stat-card:nth-child(4){animation-delay:.21s}
+.stat-card:hover{transform:translateY(-4px);border-color:#92cfe5;box-shadow:0 10px 23px #2683ab16}
+.stat-card.featured{background:linear-gradient(140deg,#d0f0ff,#e9faff);border-color:#b8dfef}
+.stat-card>span{color:#497c96}.stat-card>svg{color:#268fb5;transition:transform .35s}.stat-card:hover>svg{transform:rotate(-10deg)}
+.stat-card strong{color:#1c6e93;font-weight:600}.stat-card strong small{color:#558ba1}.stat-card p{color:#60849a}
+.panel{border-color:#cee5f0;border-radius:14px;box-shadow:0 5px 18px #2c77930a;animation:sky-arrive .5s ease-out}
+.panel-heading h3{font-family:'DM Sans',sans-serif;font-weight:600;color:#2d6682;font-size:16px;letter-spacing:-.3px}
+.panel-heading .eyebrow{color:#578fa7}.panel-heading>svg{color:#479fbd}.panel-heading .pill{background:#e4f7fd;color:#2d859f;border-color:#c5e5f1}
+.map-wrap{border-color:#c9e3ed;border-radius:10px}
+.map-source,.map-source button{color:#4b849c}.map-source button:hover{color:#007caa}
+.map-overlay-label{background:#ffffffed;border-color:#baddf0;color:#287c9f;border-radius:7px}.map-bottom-label{color:#3e7c99;background:#ffffffed;border-radius:7px}
+.map-point-dot{background:#138bad;box-shadow:0 0 0 6px #48b8d332}.map-point-label{background:#10799f;border-color:#2e9cbc;border-radius:8px;color:white}
+.map-fit{border-color:#baddf0;color:#4c8a9f;border-radius:7px}
+.weekly-day{border-color:#e0eef5;transition:background .25s,transform .25s;border-radius:6px}
+.weekly-day:hover{background:#f0faff;transform:translateX(3px)}
+.weekly-day strong{color:#335f7a}.weekly-day>div>small{color:#66889c}.weekly-day>svg{color:#4aa5c2;transition:transform .25s}.weekly-day:hover>svg{transform:rotate(-9deg)}
+.day-rain{color:#328aaf}.day-temp>span{color:#7195a7}.weekly-note{color:#6a8ea3}
+.forecast-insights-heading h2{font-family:var(--serif);font-weight:500;font-size:31px;color:#255670}.forecast-insights-heading p{color:#5c8398}
+.next-action{border-color:#bcdfe9;border-radius:15px;background:radial-gradient(ellipse at 100% 30%,#c7eef4,transparent 60%),linear-gradient(130deg,#e4f7fb,#edfaff)}
+.next-action:after{content:'';position:absolute;right:-8px;bottom:12px;width:38%;height:72%;background:url('/assets/crop-care.png') center bottom/contain no-repeat;pointer-events:none;opacity:.95;transition:transform .4s}
+.next-action:hover:after{transform:translateY(-7px) rotate(3deg)}
+.next-action h3{font-family:var(--serif);font-weight:500;font-size:29px;color:#215971;max-width:73%;z-index:1}
+.next-action>svg{color:#4a9aab}.next-action .eyebrow{color:#38869b}.next-action p{color:#4c7b8c;max-width:66%;z-index:1}.next-action .button{z-index:1}
+.source-line{color:#4a7d95}.source-line>button{color:#137c9e}.source-line a{border-bottom-color:#9bcada}
+.workspace-footer{color:#61899e;border-color:#cbe3ef}
+.comparison-layout .comparison-panel .panel-heading h3{color:#295f7d;font-family:'DM Sans',sans-serif;font-size:19px;font-weight:600}
+.segmented{background:#eaf6fb;border-color:#c4e0ee;border-radius:9px;padding:4px}.segmented button{border-radius:6px;color:#5285a0;font-weight:500}
+.segmented button.active{background:#1689b4;color:#fff;box-shadow:0 3px 9px #228cb525}
+.segmented button:hover:not(.active){background:#d7f0fb;color:#297695}
+.comparison-points>span,.comparison-points>label,.comparison-points select{color:#247798}.comparison-points small{color:#6a8fa3}
+.method-note{background:#ecf8fe;color:#4c7d96;border-radius:9px;border:1px solid #dceef5}
+.coordinates-panel h3,.comparison-layout .coordinates-panel h3{font-family:var(--serif);font-weight:500;font-size:22px;color:#2c647e;letter-spacing:-.4px}
+.coordinates-panel article{border-color:#a7d9ec}.coordinates-panel article>strong{color:#217da0}.coordinates-panel article>span,.coordinates-panel article>p,.coordinates-panel article>small{color:#56839b}
+.planner-top{position:relative;padding-right:95px}
+.planner-top h3{font-family:var(--serif);font-weight:500;font-size:29px;color:#2c6279}.planner-top .eyebrow,.planner-top p{color:#5d899e}
+.planner-crop-art{position:absolute;right:5px;top:-10px;width:86px;height:104px;object-fit:contain;filter:drop-shadow(0 5px 5px #417d9115);transition:transform .4s}
+.planner-top:hover .planner-crop-art{transform:translateY(-5px) rotate(4deg)}
+.planner-controls{border-color:#d3e8f1}.planner-controls label{color:#4d8099}.planner-controls select{background:#f5fcff;border-color:#b9daeb;color:#2e6e8b;border-radius:9px}
+.advisory-item{border-color:#cce6ed;background:#eefaff;border-radius:11px;transition:transform .25s,box-shadow .25s;animation:sky-arrive .5s backwards}
+.advisory-item:nth-child(2){animation-delay:.07s}.advisory-item:nth-child(3){animation-delay:.14s}.advisory-item:nth-child(4){animation-delay:.21s}
+.advisory-item:hover{transform:translateY(-3px);box-shadow:0 10px 20px #3187a112}
+.advisory-item.amber{background:#fff8e9;border-color:#eedcb5}.advisory-item h4{color:#2b6680;font-weight:600}.advisory-item p{color:#537e92}.advisory-index{font-family:var(--serif);color:#72abc0;font-weight:500}
+.advisory-item details,.advisory-item summary,.advisory-item a{color:#217f9d}.advisory-item summary:hover{color:#005c85}
+.planner-bottom>span{color:#5f869c}
+.pipeline-visual{border-radius:14px;box-shadow:0 12px 30px #357b9314}
+.pipeline-image-tint{background:linear-gradient(0deg,#123f5ce8,#39839a15 85%)}
+.pipeline-image-bottom h3{font-family:var(--serif);font-weight:500;font-size:29px}
+.pipeline-image-label{background:#eaf9ffeb;border-color:#ffffffc9;color:#2c7b99;border-radius:8px;box-shadow:0 5px 15px #123f5c15}
+.scan-frame>i{border-color:#c0f2ff}.scan-frame.scanning>span{background:#8df3ff;box-shadow:0 -10px 35px 12px #99e9ff30}
+.run-step strong{color:#396d87}.run-step small,.run-step time,.run-meta{color:#638ba2}
+.step-indicator{background:#f0faff;border-color:#bcddeb;color:#548ea7}.run-step.done .step-indicator{background:#dcf5fd;border-color:#a9dbe9;color:#178daf}
+.run-step.active .step-indicator{background:#e6f9ff;color:#108ab6;box-shadow:0 0 0 4px #78cfe729}
+.run-step{transition:transform .22s}.run-step:hover{transform:translateX(4px)}
+.pipeline-locked{background:#e9f8ff;border-color:#b4ddea;border-radius:11px}.pipeline-locked:hover{background:#def3fe;transform:translateY(-2px);box-shadow:0 6px 16px #409aba14}
+.pipeline-locked strong{color:#3b7892}.pipeline-locked small{color:#638ba0}
+.empty-state{border-color:#c6e4f1;background:#f9fdff;border-radius:15px;color:#4dabc6}
+.empty-state h3{font-family:var(--serif);color:#3b7992}.empty-state p{color:#658ca1}
+.search-results{border-color:#b9deed;border-radius:12px;box-shadow:0 12px 25px #236a8b14;background:white;animation:sky-arrive .2s ease-out}
+.search-results button:hover{background:#e7f8ff}.search-results strong{color:#2f6d8c}.search-results small,.search-results>p{color:#5e889e}
+.modal-backdrop{background:#17496765;backdrop-filter:blur(7px)}
+.modal{background:#fcfeff;border-color:#d6edf7;border-radius:22px;box-shadow:0 30px 100px #17557930;animation:dialog-arrive .3s cubic-bezier(.2,.8,.2,1)}
+.modal>h2{font-family:var(--serif);font-weight:500;color:#215c79;font-size:30px}.modal>.eyebrow{color:#4b95af}
+.modal-lead,.modal>p:not(.modal-lead){color:#537f97}.modal-lock{color:#92cde1}
+.development-note{background:#eaf8ff;border-color:#c4e4f3;border-radius:12px}.development-note>strong{color:#2c7b9b}.development-note p{color:#5a879d}
+.chat-context{color:#52819a;border-color:#d7eaf3}.chat-context select{background:#e9f8ff;border-color:#c6e4ef;color:#3483a0;border-radius:8px}
+.voice-orb.adviser-orb{width:96px;height:96px;border-radius:50%;background:radial-gradient(circle,#c4efff,#e2f8ff);box-shadow:0 0 0 8px #eaf8ff,0 0 0 16px #f3fbff;position:relative;margin-bottom:23px;animation:avatar-breathe 5s ease-in-out infinite;overflow:hidden}
+.adviser-orb>img{position:absolute;width:83px;height:auto;top:3px;left:6px;object-fit:contain}
+.chat-empty h3{font-family:var(--serif);font-weight:500;color:#2d6b87}.chat-empty p,.chat-footnote{color:#5e879f!important}
+.suggestions button{background:#edf9ff;border-color:#c3e4f2;color:#337f9e;border-radius:9px}.suggestions button:hover{background:#daf3ff;transform:translateY(-2px);border-color:#94cfe6}
+.chat-message{background:#f0f9fd;border-color:#d6eaf4;color:#3a6d87;border-radius:14px 14px 14px 3px;animation:sky-arrive .3s ease-out}
+.chat-message.user{background:#dcf3ff;border-color:#c1e5f6;color:#245f7f;border-radius:14px 14px 3px 14px}
+.message-label{color:#6c9eb5}.chat-message a,.chat-sources a,.listen-btn{color:#1b83a7}
+.chat-composer{border-color:#bddfed;border-radius:13px;box-shadow:0 4px 14px #3d8ba30b}.chat-composer:focus-within{border-color:#58b0d0;box-shadow:0 0 0 3px #72cbe221}
+.chat-composer input{color:#286a87}.chat-composer input::placeholder{color:#6c99af}
+.mic-btn{border-radius:9px;background:#e5f6fe;color:#3999b5}.send-btn{background:#1689b4;border-radius:9px}.send-btn:hover{background:#07729e;transform:scale(1.06)}
+.toast{background:#f2fbff;color:#236789;border-color:#acd5e9;border-radius:12px;box-shadow:0 10px 30px #3d84a323}.toast>button{color:#4e93b0}
+@keyframes sky-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes dialog-arrive{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes weather-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes farmer-float{0%,100%{transform:translateY(0) rotate(-.5deg)}50%{transform:translateY(-4px) rotate(.5deg)}}
+@keyframes sky-orbit{to{transform:rotate(337deg)}}
+@keyframes arrow-nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+@keyframes avatar-breathe{0%,100%{box-shadow:0 0 0 8px #eaf8ff,0 0 0 16px #f3fbff}50%{box-shadow:0 0 0 10px #eaf8ff,0 0 0 21px #f3fbff}}
+@keyframes icon-arrive{0%{transform:scale(.8)}65%{transform:scale(1.15)}100%{transform:scale(1)}}
+@media(min-width:1000px) and (max-height:780px){
+  .portal-hero h1{font-size:clamp(40px,4.3vw,58px);margin:13px 0}
+  .portal-section-heading h2{font-size:32px}.featured-service h3{font-size:30px}
+  .workspace-title h1{font-size:28px}.planner-top h3{font-size:26px}.planner-top p{font-size:11px}
+  .portal-service-weather>span{font-size:62px}.portal-project-card h3{font-size:28px}
+}
+@media(min-width:1000px) and (max-height:680px){
+  .portal-hero h1{font-size:40px;margin:10px 0}.portal-section-heading h2{font-size:27px}
+  .featured-service h3{font-size:22px}.service-art{width:43px;height:53px;top:9px;right:10px}.adviser-art{height:60px;top:3px}
+  .portal-project-card h3{font-size:25px}.portal-project-card>p{font-size:11px}
+  .farmer-guide>img{height:155px}.farmer-guide{left:16px;bottom:15px}.farmer-guide>span{font-size:9px;padding:7px 9px;gap:6px}
+}
+@media(max-width:1100px){.portal-hero h1{font-size:46px}.portal-section-heading h2{font-size:31px}.service-art{height:63px;width:53px;right:10px}.adviser-art{height:70px}.portal-service h3{font-size:16px}.featured-service h3{font-size:27px}.farmer-guide{left:12px}.farmer-guide>span{left:70%;font-size:9px;gap:5px;padding:7px 8px}.portal-project-card h3{font-size:28px}.planner-top h3{font-size:26px}}
+@media(max-width:900px){
+  .portal-hero h1{font-size:clamp(33px,4.7vw,43px)}.portal-hero-copy>p{font-size:12px}.portal-section-heading h2{font-size:29px}
+  .portal-weather-panel{border-radius:18px}.portal-temperature{padding:9px 11px}.portal-temperature strong{font-size:29px}
+  .farmer-guide>img{height:165px}.farmer-guide>span{font-size:8px;left:50%;gap:4px}.farmer-guide>span>svg{width:12px}
+  .portal-scene .cloud-canvas{inset:-8px -40px -20px -10px}
+  .portal-service h3{font-size:15px}.featured-service h3{font-size:25px}.portal-service-weather>span{font-size:59px}
+  .portal-summary-strip>div>svg{width:29px;height:29px;padding:5px}.portal-summary-strip small{font-size:9px}
+  .portal-project-card h3{font-size:27px}.portal-service-weather{gap:12px}
+  .next-action h3{max-width:65%}.next-action p{max-width:62%}
+}
+@media(max-width:650px){
+  .portal-brand .brand{font-size:27px}.portal-descriptor{font-size:6px;letter-spacing:.6px}.portal-team strong{font-size:12px}
+  .portal-menu{color:#31748f}.portal-menu:hover{color:#006d97}.portal-navigation nav{background:#f3fbff;border-top-color:#c4e1ee;box-shadow:0 9px 15px #25759016}
+  .portal-navigation nav a{color:#327493}.portal-navigation nav a:hover{background:#def4ff;border-radius:8px}.portal-launch{font-size:10px}
+  .portal-hero h1{font-size:clamp(33px,9vw,42px);letter-spacing:-1.25px;line-height:1.1;margin:10px 0}
+  .portal-hero h1 br{display:initial}.portal-hero h1>span:before{content:none}.portal-hero h1>span:after{bottom:-4px;border-width:2px}
+  .portal-hero-copy>p{font-size:12px}.portal-hero-grid{gap:16px}.portal-hero .portal-kicker{font-size:7px;letter-spacing:1px}
+  .portal-weather-panel{border-radius:17px}.portal-panel-top{padding-inline:12px;font-size:7px}
+  .portal-temperature{top:12px;right:12px;padding:7px 9px;border-radius:10px;min-width:93px}.portal-temperature strong{font-size:25px}.portal-temperature>span{font-size:7px}.portal-temperature>span:first-child{font-size:6px}
+  .portal-scene .cloud-canvas{inset:-23px -50px -28px 0}
+  .farmer-guide{left:13px;bottom:8px}.farmer-guide>img{height:clamp(100px,17vh,155px)}
+  .farmer-guide>span{font-size:7px;left:80%;bottom:0;padding:5px 7px;gap:4px;border-radius:8px}.farmer-guide>span>svg{width:10px}.farmer-guide>span>svg:last-child{display:none}
+  .portal-scene-controls{padding:5px 9px}.portal-scene-controls button{border-radius:7px}.portal-scene-controls>span{font-size:7px}
+  .portal-summary-strip>div>svg{display:none}.portal-summary-strip strong{font-size:9px}.portal-summary-strip small{font-size:8px}
+  .portal-section-heading h2{font-size:27px;line-height:1.15}.portal-service{border-radius:10px;padding:13px 12px;grid-template-columns:30px 1fr 17px}
+  .portal-service h3,.featured-service h3{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;line-height:1.3;letter-spacing:-.2px}
+  .portal-service:after{height:2px}.portal-service p,.featured-service p{font-size:10px;line-height:1.5}.portal-service:hover{transform:translateY(-2px)!important}
+  .service-art{right:37px;top:7px;height:56px;width:43px}.adviser-art{height:61px;top:3px}
+  .portal-service:has(.service-art) h3,.portal-service:has(.service-art) p{padding-right:44px}
+  .portal-landscape{border-radius:15px}.portal-landscape figcaption strong{font-size:24px}.portal-method-content li>span{border-radius:9px}
+  .portal-project-card{border-radius:12px}.portal-project-card h3{font-size:24px;margin:5px 0 10px}.portal-roadmap{border-radius:12px}.portal-roadmap>button:hover{padding-left:16px}
+  .portal-footer{font-size:8px}.portal-footer a,.portal-footer button{font-size:8px}
+  .chat-fab{width:44px;height:44px;padding:4px;border-radius:50%}.chat-fab>img{width:34px;height:34px}
+  .workspace-title h1{font-size:27px;letter-spacing:-.7px}.workspace-title p{font-size:11px}
+  .sidebar nav>button{border-radius:8px}.panel{border-radius:12px}.panel-heading h3{font-size:15px}
+  .stat-card{border-radius:11px}.stat-card strong{font-size:28px}.stat-card>span{font-size:9px}.stat-card p{font-size:8px}
+  .map-wrap{border-radius:9px}.weekly-day:hover{transform:translateY(-2px)}
+  .forecast-insights-heading h2{font-size:27px}.next-action h3{font-size:27px;max-width:70%}.next-action p{font-size:12px;max-width:65%}.next-action:after{width:38%;height:70%;right:-4px}
+  .comparison-layout .coordinates-panel h3{font-size:22px}.comparison-layout .comparison-panel .panel-heading h3{font-size:18px}
+  .planner-top{padding-right:73px}.planner-top h3{font-size:26px}.planner-crop-art{width:69px;height:83px;right:-6px;top:0}.planner-top p{font-size:10px}
+  .advisory-item{border-radius:10px}.advisory-item h4{font-size:14px}.advisory-item p{font-size:12px}
+  .pipeline-visual{border-radius:13px}.pipeline-image-bottom h3{font-size:28px}
+  .modal{border-radius:18px}.modal>h2{font-size:28px}.chat-empty h3{font-size:24px}.voice-orb.adviser-orb{width:82px;height:82px;margin-bottom:22px}.adviser-orb>img{width:71px;left:5px}
+}
+@media(max-width:650px) and (max-height:740px){
+  .portal-hero h1{font-size:30px;margin:8px 0}.portal-hero-copy>p{font-size:11px}.portal-section-heading h2{font-size:24px;line-height:1.1}
+  .portal-hero-grid{gap:12px}.portal-location-form{margin-top:10px}.portal-hero-links{margin-top:8px}
+  .portal-service{padding:8px 11px;min-height:64px}.portal-service h3,.featured-service h3{font-size:13px}.portal-service p,.featured-service p{font-size:9px}
+  .service-art{width:37px;height:49px;right:34px;top:5px}.adviser-art{height:54px;top:2px}.portal-service:has(.service-art) h3,.portal-service:has(.service-art) p{padding-right:36px}
+  .farmer-guide>img{height:105px}.portal-temperature strong{font-size:23px}.portal-temperature{top:6px;right:8px;padding:5px 8px;min-width:90px}
+  .portal-project .portal-section-heading h2{font-size:23px}.portal-project-card h3{font-size:23px;margin-bottom:8px}
+  .portal-landscape figcaption strong{font-size:22px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .portal-service:hover,.stat-card:hover,.advisory-item:hover,.button:hover{transform:none!important}
+}

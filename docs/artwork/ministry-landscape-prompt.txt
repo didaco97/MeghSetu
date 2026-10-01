@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: PNG landscape panel for MeghSetu, an agricultural weather service prototype.
+Primary request: A refined editorial aerial photograph-style illustration of rural Maharashtra, India, under a dramatic but peaceful monsoon sky. A patchwork of green agricultural plots, narrow field boundaries, a small water channel, distant rounded Deccan hills, a few village homes, and luminous cumulus clouds. The image expresses the connection between weather and farming.
+Composition: Wide 16:9 landscape. Lower two thirds are richly textured green fields; upper third is a soft blue-gray sky with substantial white clouds. Natural perspective, crisp detail, a believable landscape. Keep the central field area uncluttered for decorative weather-grid overlays added separately in code.
+Lighting: Clear diffuse morning daylight after rain; restrained, dignified, optimistic.
+Palette: Deep agricultural green, muted olive, natural earth, slate blue sky, white clouds. Photographic color grading with controlled saturation.
+Constraints: No text, letters, labels, numbers, logos, seals, flags, watermark, interface, artificial data visualization, or actual satellite observation claims. No oversized futuristic objects. Landscape artwork only.

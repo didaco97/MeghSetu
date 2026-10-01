@@ -1,0 +1,16 @@
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import '@fontsource/noto-sans-devanagari/devanagari-400.css';
+import '@fontsource/noto-sans-devanagari/devanagari-600.css';
+import '@fontsource/dm-sans/latin-400.css';
+import '@fontsource/dm-sans/latin-500.css';
+import '@fontsource/dm-sans/latin-600.css';
+import '@fontsource/dm-sans/latin-700.css';
+import '@fontsource/fraunces/latin-500.css';
+import '@fontsource/fraunces/latin-600.css';
+import 'maplibre-gl/dist/maplibre-gl.css';
+import './styles.css';
+import './public-service.css';
+import './sky-theme.css';
+import App from './App.jsx';
+createRoot(document.getElementById('root')).render(<React.StrictMode><App/></React.StrictMode>);

@@ -1,0 +1,48 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
+
+[dev]
+  framework = "#custom"
+  command = "npm run preview:static"
+  targetPort = 4174
+  publish = "dist"
+  port = 8888
+  autoLaunch = false
+
+# The app uses hash routing, so assets and missing files need no SPA rewrite.
+# These optional friendly URLs forward to the actual frontend routes.
+[[redirects]]
+  from = "/workspace/*"
+  to = "/#workspace/:splat"
+  status = 302
+
+[[redirects]]
+  from = "/mobile-preview"
+  to = "/#mobile-preview"
+  status = 302
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Cache-Control = "no-store"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "microphone=(self), geolocation=(self), camera=()"

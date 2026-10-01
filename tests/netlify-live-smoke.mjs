@@ -1,0 +1,33 @@
+// Run against `npm run dev:netlify -- --offline --no-open`.
+// Calls only the public weather provider; no assistant or voice usage is billed.
+import assert from 'node:assert/strict';
+const base=process.env.NETLIFY_TEST_URL||'http://localhost:8888';
+const post=(route,value,origin=base)=>fetch(base+route,{method:'POST',headers:{Origin:origin,'Content-Type':'application/json'},body:JSON.stringify(value)});
+const health=await fetch(base+'/api/health');
+assert.equal(health.status,200);
+assert.equal((await health.json()).services.weather,true);
+const unknown=await fetch(base+'/api/not-a-real-route');
+assert.equal(unknown.status,404);
+assert.match(unknown.headers.get('content-type'),/json/);
+assert.equal((await post('/api/forecast',{location:{lat:0,lon:0}})).status,400);
+assert.equal((await post('/api/assistant',{message:'test'},'https://example.org')).status,403);
+const response=await post('/api/forecast',{location:{name:'Pune',lat:18.5204,lon:73.8567},reference:{name:'Baramati',lat:18.1517,lon:74.5775}});
+assert.equal(response.status,200);
+assert.match(response.headers.get('content-type'),/application\/x-ndjson/);
+const events=(await response.text()).trim().split('\n').map(line=>JSON.parse(line));
+const result=events.find(event=>event.type==='result')?.data;
+assert.ok(result,JSON.stringify(events.at(-1)));
+assert.equal(result.processing.downscalingApplied,false);
+const plan=await post('/api/advisory',{runId:result.runId,crop:'Wheat',stage:'Harvest'});
+assert.equal(plan.status,200);
+assert.equal((await plan.json()).items[1].title,'Wheat: harvest stage');
+const page=await fetch(base+'/mobile-preview');
+assert.equal(page.status,200);
+assert.match(page.headers.get('content-type'),/text\/html/);
+const html=await page.text();
+const script=html.match(/src="(\/assets\/[^\"]+\.js)"/)?.[1];
+assert.ok(script,'built frontend entry is present');
+const asset=await fetch(base+script);
+assert.equal(asset.status,200);
+assert.match(asset.headers.get('content-type'),/javascript/);
+console.log('Netlify runtime passed: API routing, weather forecast, shared Blobs context, crop plan, same-origin checks, frontend asset delivery and hash-route redirects. No paid service calls.');
